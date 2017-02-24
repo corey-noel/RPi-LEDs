@@ -2,6 +2,8 @@ import math
 import LED
 import time
 
+## cycles through an array of colors
+## fades each color out before fading the next one in
 colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
 speed = 5
 

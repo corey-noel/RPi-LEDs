@@ -2,8 +2,9 @@ import time
 import LED
 import math
 
-rotation_speed = 2
+## cycles through a range of colors using offset sin waves
 
+rotation_speed = 2
 red_offset = 0.0
 green_offset = 2.0/3.0 * math.pi
 blue_offset = 4.0/3.0 * math.pi
