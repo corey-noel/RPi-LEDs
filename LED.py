@@ -1,5 +1,4 @@
 import pigpio
-import time
 
 r_pin = 17
 g_pin = 24
@@ -19,21 +18,3 @@ def set_color(r, g, b):
 ## must be called before exiting the program
 def stop():
   pi.stop()
-
-## sets the color of the LED to the result of
-## the function cycle once every sleep_time seconds
-## cycle must return a 3-tuple (r, g, b)
-## values must be [0, 255]
-def run_cycle(cycle, sleep_time=0.05):
-  start()
-  start_time = time.time()
-
-  try:
-    while True:
-      set_color(*cycle())
-      time.sleep(sleep_time - ((time.time() - start_time) % sleep_time))
-  except KeyboardInterrupt:
-    pass
-
-  set_color(0, 0, 0)
-  stop()
