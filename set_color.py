@@ -5,10 +5,10 @@ import LED
 LED.start()
 
 if len(argv) == 2:
-  if len(argv[2]) != 7:
-    print("Error: Invalid input (use a hex code #RRGGBB)")
+  if len(argv[1]) != 6:
+    print("Error: Invalid input (use a hex code RRGGBB)")
   else:
-    LED.set_color(int(argv[1][1:3], 16), int(argv[1][3:5], 16), int(argv[1][5:7], 16))
+    LED.set_color(int(argv[1][0:2], 16), int(argv[1][2:4], 16), int(argv[1][4:6], 16))
 
 elif len(argv) == 4:
   LED.set_color(int(argv[1]), int(argv[2]), int(argv[3]))

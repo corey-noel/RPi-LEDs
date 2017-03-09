@@ -1,4 +1,5 @@
 import math
+import LED_control
 
 ## cycles through random colors
 ## crossfades between colors continually
