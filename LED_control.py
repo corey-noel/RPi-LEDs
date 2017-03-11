@@ -1,9 +1,8 @@
-import LED
-import time
-from sys import argv
-import importlib
+import LED 
+import time 
+from sys import argv 
+import importlib 
 import random
-
 
 ## members:
 ## refresh_time
@@ -51,8 +50,16 @@ def random_color(time):
   random.seed(time)
 
   r = random.randint(0, 255)
-  g = random.randint(0, 255)
-  b = random.randint(0, 255)
+  g = random.randint(0, 200)
+  b = random.randint(0, 200)
+
+  c = random.randint(0, 3)
+  if c == 0:
+    r = 0
+  elif c == 1:
+    g = 0
+  elif c == 2:
+    b = 0
 
   return (r, g, b)
 
